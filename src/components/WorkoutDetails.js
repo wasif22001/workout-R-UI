@@ -22,7 +22,7 @@ const WorkoutDetails = ({workout}) => {
             <p><strong>Reps:</strong> {workout.reps}</p>
             <p><strong>Load (kg):</strong> {workout.load}</p>
             <p> {workout.createdAt}</p>
-            <span onClick={handleClick}>delete</span>
+            <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
         </div>
     )
 }
