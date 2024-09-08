@@ -15,6 +15,10 @@ export const workoutsReducer = (state, action) => {
             return {
                 workouts: [action.payload, ...state.workouts]  // Adding the new workout to the top and then spreading the workouts in the previous state and adding them also.
             }
+        case 'DELETE_WORKOUT':
+            return {
+                workouts: state.workouts.filter((w) => w._id !== action.payload._id)
+            }
         default:
             return state
         
